@@ -1,0 +1,14 @@
+<form (ngSubmit)="save(editAppareilForm)" #editAppareilForm="ngForm">
+    <div class="form-group">
+        <label for="name">Nom de l'appareil</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nom de l'appareil" required ngModel>
+    </div>
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="status" name="status" ngModel>
+        <label class="custom-control-label" for="status">Etat de l'appareil</label>
+    </div>
+
+    <button type="submit" [disabled]="editAppareilForm.invalid"  class="btn btn-primary">Enregisetr</button>
+</form>
+

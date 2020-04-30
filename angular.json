@@ -50,6 +50,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -114,6 +116,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -145,6 +148,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "webautomation"
+    }
+  },
+  "defaultProject": "webautomation",
+  "cli": {
+    "analytics": "390e6efa-3a1e-4395-8167-0e2ae76cdd4f"
+  }
 }

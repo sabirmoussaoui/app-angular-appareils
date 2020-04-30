@@ -1,0 +1,32 @@
+<li 
+[ngClass]="{
+     'list-group-item':true,
+     'list-group-item-danger': appareilStatus === 'disable',
+     'list-group-item-success':appareilStatus === 'enable'}">
+<!-- 
+  <div style="width:20px;height:20px;border-radius:50%;" 
+       *ngIf="appareilStatus === 'disable'"
+       [ngStyle] = "{'background-color':getColorStatus()}"
+       ></div>
+  <div style="width:20px;height:20px;border-radius:50%" 
+       *ngIf="appareilStatus === 'enable'"
+       [ngStyle] = "{'background-color':getColorStatus()}"
+       ></div>
+      -->
+<div style="width:20px;height:20px;border-radius:50%;" [ngStyle] = "{'background-color':getColorStatus()}"></div>
+<a [routerLink]="[id]">Détail</a>
+  <h4>Appareil : {{ appareilName }} -- Statut : {{ getStatus() }} </h4>
+ 
+<div class="row">
+     <input type="text" class="form-control" [(ngModel)]="appareilName">
+
+<button   *ngIf = "appareilStatus === 'disable'" class="btn btn-success" [disabled]= "!isAuth" (click) = "onSwitch()">
+<fa-icon   [icon]="faPlay"></fa-icon> 
+</button>
+
+<button   *ngIf = "appareilStatus === 'enable'" class="btn btn-danger"   [disabled]= "!isAuth" (click) = "onSwitch()">
+<fa-icon   [icon]="faPowerOff"></fa-icon> 
+</button>
+
+</div>
+</li>

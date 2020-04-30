@@ -1,0 +1,4 @@
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" *ngIf ="!authStatus" (click) = "signIn()" >Login</button>
+    <button type="button" class="btn btn-warning" *ngIf ="authStatus" (click) = "signOut()">logout</button>
+</div>
